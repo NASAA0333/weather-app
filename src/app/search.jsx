@@ -1,4 +1,4 @@
-"use cilent";
+"use client";
 
 const SearchIcon = () => {
   return (
