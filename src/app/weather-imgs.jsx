@@ -14,7 +14,7 @@ export function WeatherImgs({ DayWeather, value }) {
   const imgNightSnow = "/Night_Snow.png";
   const imgNightWind = "/Night Wind.png";
   const imgNightMoon = "/moon.png";
-  const imgNightCloud = "/Night Clouds.png";
+  const imgNightCloud = "/Night_Clouds.png";
 
   let imgSource = imgSun;
   const conditionText = DayWeather.condition;
@@ -23,21 +23,19 @@ export function WeatherImgs({ DayWeather, value }) {
     if (conditionText?.includes("rain")) {
       imgSource = imgNightRain;
     } else if (conditionText?.includes("snow")) {
-      console.log(conditionText, "---->>>");
-
       imgSource = imgNightSnow;
     } else if (
       conditionText?.includes("cloud") ||
       conditionText === "overcast" ||
-      conditionText === "Mist" ||
-      conditionText === "Fog"
+      conditionText === "mist" ||
+      conditionText === "fog"
     ) {
       imgSource = imgNightCloud;
-    } else if (conditionText?.includes("Thunderstorm")) {
+    } else if (conditionText?.includes("thunderstorm")) {
       imgSource = imgNightStorm;
-    } else if (conditionText?.includes("Hail")) {
+    } else if (conditionText?.includes("hail")) {
       imgSource = imgNightStorm;
-    } else if (conditionText == "Windy" || conditionText == "Blustery") {
+    } else if (conditionText == "windy" || conditionText == "blustery") {
       imgSource = imgNightWind;
     } else {
       imgSource = imgNightMoon;
@@ -50,15 +48,15 @@ export function WeatherImgs({ DayWeather, value }) {
     } else if (
       conditionText?.includes("cloud") ||
       conditionText?.includes("overcast") ||
-      conditionText == "Mist" ||
-      conditionText == "Fog"
+      conditionText === "mist" ||
+      conditionText === "fog"
     ) {
       imgSource = imgCloud;
-    } else if (conditionText?.includes("Thunderstorm")) {
+    } else if (conditionText?.includes("thunderstorm")) {
       imgSource = imgStorm;
-    } else if (conditionText?.includes("Hail")) {
+    } else if (conditionText?.includes("hail")) {
       imgSource = imgStorm;
-    } else if (conditionText == "Windy" || conditionText == "Blustery") {
+    } else if (conditionText === "windy" || conditionText == "blustery") {
       imgSource = imgWind;
     }
   }
