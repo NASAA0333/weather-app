@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+
 import { SearchIcon } from "./search.jsx";
 
 export const SearchInput = ({ search, onChangeText, keyDown }) => {

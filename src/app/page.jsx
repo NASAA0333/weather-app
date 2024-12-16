@@ -44,11 +44,6 @@ export default function Home() {
             .trim()
             .toLowerCase(),
         });
-        console.log(
-          data.forecast.forecastday[0].day.condition.text,
-          "tsag agaar"
-        );
-        console.log(data.forecast.forecastday[0].hour[4].condition.text);
       });
   }, [city]);
 
